@@ -532,6 +532,7 @@ input.invalid {
 .header {
   background: url(../img/menuFon.jpg) no-repeat center/cover;
   height: 252px;
+  position: relative;
 }
 
 .header::before {
@@ -540,7 +541,7 @@ input.invalid {
   left: 0;
   top: 0;
   width: 100%;
-  height: 252px;
+  height: 100%;
   background-color: rgba(31, 32, 33, 0.788);
   z-index: 0;
 }
@@ -733,8 +734,8 @@ input.invalid {
 }
 
 .heartActive {
-  display: none;
   position: absolute;
+  background: url(../img/heartActive.png) no-repeat;
   top: 36px;
   right: 33px;
 }
@@ -959,7 +960,8 @@ input.invalid {
 
 @media screen and (min-width: 1024px) and (max-width: 1280px) {
   .container {
-    max-width: 980px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .cards {
@@ -984,7 +986,8 @@ input.invalid {
 
 @media screen and (min-width: 992px) and (max-width: 1023px) {
   .container {
-    max-width: 970px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .cards {
@@ -1018,11 +1021,8 @@ input.invalid {
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .container {
-    max-width: 970px;
-  }
-
-  .menu {
-    display: none;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
   .logo__mobile {
@@ -1129,10 +1129,17 @@ input.invalid {
   .menu {
     z-index: 9;
     display: none;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     position: absolute;
-    right: -350px;
+    right: -300px;
     top: 0;
-    width: 320px;
+    width: 300px;
     padding: 40px;
     background-color: #232423;
     -webkit-transition: -webkit-transform 0.4s ease-in;
@@ -1156,10 +1163,11 @@ input.invalid {
     padding-top: 10px;
   }
 
-  .mobile-nav--active {
+  .menu--active {
     -webkit-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
+    display: block;
   }
 
   .cards {
@@ -1167,21 +1175,505 @@ input.invalid {
         justify-content: space-around;
   }
 
+  .card {
+    min-height: 507px;
+  }
+
+  .card__img {
+    max-width: 340px;
+    height: 250px;
+  }
+
+  .form__input {
+    width: 320px;
+  }
+
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0 0 50px;
+    margin-bottom: 40px;
+  }
+
+  .footer__btn {
+    padding: 0 40px;
+  }
+
+  .leftBlock__text {
+    line-height: 30px;
+  }
+
+  #button-up {
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo__mobile {
+    display: block;
+  }
+
+  .mobile {
+    padding-top: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .menu-icon {
+    z-index: 19;
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+  }
+
+  .menu-icon-line {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+  }
+
+  .menu-icon-line::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+    -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  }
+
+  .menu-icon-line::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+    -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line {
+    background-color: transparent;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  }
+
+  .menu {
+    z-index: 9;
+    display: none;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    padding: 40px;
+    background-color: #232423;
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    -o-transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+    border-radius: 0 0 0 50px;
+  }
+
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
+  .nav__item {
+    padding-top: 10px;
+  }
+
+  .menu--active {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: block;
+  }
+
+  .sort__title {
+    padding-right: 15px;
+  }
+
+  .cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .card {
+    min-height: 507px;
+  }
+
+  .card__img {
+    max-width: 340px;
+    height: 250px;
+  }
+
+  .form__input {
+    width: 320px;
+  }
+
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px;
+    margin-bottom: 40px;
+    height: 410px;
+  }
+
+  .footer__btn {
+    padding: 0 40px;
+  }
+
+  .footer__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .leftBlock__text {
+    line-height: 30px;
+  }
+
+  #button-up {
+    right: 5px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logo__mobile {
+    display: block;
+  }
+
+  .mobile {
+    padding-top: 26px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+
+  .menu-icon {
+    z-index: 19;
+    position: relative;
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 50px;
+  }
+
+  .menu-icon-line {
+    position: relative;
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+  }
+
+  .menu-icon-line::before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+    -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  }
+
+  .menu-icon-line::after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: '';
+    width: 30px;
+    height: 3px;
+    background-color: #6EBBD3;
+    -webkit-transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    transition: top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+    -o-transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s, -webkit-transform 0.2s ease-in;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line {
+    background-color: transparent;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  }
+
+  .menu-icon.menu-icon-active .menu-icon-line::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+    -webkit-transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, -webkit-transform 0.2s ease-in 0.2s;
+    -o-transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s, -webkit-transform 0.2s ease-in 0.2s;
+  }
+
+  .menu {
+    z-index: 9;
+    display: none;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    padding: 40px;
+    background-color: #232423;
+    -webkit-transition: -webkit-transform 0.4s ease-in;
+    transition: -webkit-transform 0.4s ease-in;
+    -o-transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in;
+    transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+    border-radius: 0 0 0 50px;
+  }
+
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-left: 0;
+    padding-top: 30px;
+  }
+
+  .nav__item {
+    padding-top: 10px;
+  }
+
+  .menu--active {
+    -webkit-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+            transform: translateX(-100%);
+    display: block;
+  }
+
+  .search {
+    font-size: 30px;
+  }
+
+  .sort {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+
+  .sort__title {
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .sort__price {
+    padding-bottom: 10px;
+  }
+
+  .cards {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .cards__btn {
+    padding: 20px 107px;
+  }
+
+  .card {
+    min-height: 440px;
+  }
+
+  .card__img {
+    max-width: 300px;
+    height: 200px;
+  }
+
+  .options__color {
+    padding-left: 10px;
+  }
+
+  .info {
+    padding: 10px 0 0 10px;
+  }
+
+  .discount {
+    top: 20px;
+    left: 20px;
+  }
+
+  .heart {
+    top: 20px;
+  }
+
   .form__input {
     width: 250px;
   }
 
   .footer {
-    padding: 85px 0 0 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 15px;
+    margin-top: 50px;
     margin-bottom: 40px;
+    height: 410px;
   }
 
   .footer__btn {
-    padding: 0 20px;
+    padding: 0 74px;
+    margin: auto;
+  }
+
+  .footer__form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .leftBlock__title {
+    font-size: 30px;
+    line-height: 40px;
   }
 
   .leftBlock__text {
     line-height: 30px;
+    font-size: 20px;
+  }
+
+  .subscribe__label {
+    font-size: 9px;
   }
 
   #button-up {

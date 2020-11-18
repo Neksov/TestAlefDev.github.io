@@ -1,6 +1,7 @@
 @media  screen and (min-width : 1024px) and (max-width : 1280px)
   .container
-    max-width: 980px
+    padding-left: 20px
+    padding-right: 20px
   .cards
     justify-content: space-around
   .form
@@ -16,7 +17,8 @@
 
 @media  screen and (min-width : 992px) and (max-width : 1023px)
   .container
-    max-width: 970px
+    padding-left: 20px
+    padding-right: 20px
   .cards
     justify-content: space-around
   .form
@@ -41,9 +43,8 @@
 
 @media  screen and (min-width : 768px) and (max-width : 991px)
   .container
-    max-width: 970px
-  .menu
-    display: none
+    padding-left: 20px
+    padding-right: 20px
   .logo
     &__mobile
       display: block
@@ -87,15 +88,12 @@
     height: 3px
     background-color: $blue
     transition: transform 0.2s ease-in, top 0.2s linear 0.2s
-
   .menu-icon.menu-icon-active .menu-icon-line
     background-color: transparent
-
   .menu-icon.menu-icon-active .menu-icon-line::before
     transform: rotate(45deg)
     top: 0
     transition: top 0.2s linear, transform 0.2s ease-in 0.2s
-
   .menu-icon.menu-icon-active .menu-icon-line::after
     transform: rotate(-45deg)
     top: 0
@@ -103,10 +101,12 @@
   .menu
     z-index: 9
     display: none
+    align-items: baseline
+    flex-direction: column
     position: absolute
-    right: -350px
+    right: -300px
     top: 0
-    width: 320px
+    width: 300px
     padding: 40px
     background-color: #232423
     transition: transform 0.4s ease-in
@@ -118,21 +118,277 @@
   .nav
     &__item
       padding-top: 10px
-  .mobile-nav--active
+  .menu--active
     transform: translateX(-100%)
+    display: block
   .cards
     justify-content: space-around
+  .card
+    min-height: 507px
+    &__img
+      max-width: 340px
+      height: 250px
+  .form
+    &__input
+      width: 320px
+  .footer
+    display: flex
+    flex-direction: column
+    padding: 20px 0 0 50px
+    margin-bottom: 40px
+    &__btn
+      padding: 0 40px
+  .leftBlock
+    &__text
+      line-height: 30px
+  #button-up
+    right: 5px
+    width: 40px
+    height: 40px
+@media  screen and (min-width : 480px) and (max-width : 767px)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+  .logo
+    &__mobile
+      display: block
+  .mobile
+    padding-top: 26px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .menu-icon
+    z-index: 19
+    position: relative
+    display: none
+    width: 30px
+    height: 30px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 50px
+  .menu-icon-line
+    position: relative
+    width: 30px
+    height: 3px
+    background-color: $blue
+  .menu-icon-line::before
+    position: absolute
+    left: 0
+    top: -10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+  .menu-icon-line::after
+    position: absolute
+    left: 0
+    top: 10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+  .menu-icon.menu-icon-active .menu-icon-line
+    background-color: transparent
+  .menu-icon.menu-icon-active .menu-icon-line::before
+    transform: rotate(45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+  .menu-icon.menu-icon-active .menu-icon-line::after
+    transform: rotate(-45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+  .menu
+    z-index: 9
+    display: none
+    align-items: baseline
+    flex-direction: column
+    position: absolute
+    right: -300px
+    top: 0
+    width: 300px
+    padding: 40px
+    background-color: #232423
+    transition: transform 0.4s ease-in
+    border-radius: 0 0 0 50px
+    &__nav
+      flex-direction: column
+      padding-left: 0
+      padding-top: 30px
+  .nav
+    &__item
+      padding-top: 10px
+  .menu--active
+    transform: translateX(-100%)
+    display: block
+  .sort
+    &__title
+      padding-right: 15px
+  .cards
+    justify-content: space-around
+  .card
+    min-height: 507px
+    &__img
+      max-width: 340px
+      height: 250px
+  .form
+    &__input
+      width: 320px
+  .footer
+    display: flex
+    flex-direction: column
+    padding: 30px
+    margin-bottom: 40px
+    height: 410px
+
+    &__btn
+      padding: 0 40px
+    &__form
+      flex-direction: column
+  .leftBlock
+    &__text
+      line-height: 30px
+  #button-up
+    right: 5px
+    width: 40px
+    height: 40px
+@media  screen and (min-width : 320px) and (max-width : 479px)
+  .container
+    padding-left: 20px
+    padding-right: 20px
+  .logo
+    &__mobile
+      display: block
+  .mobile
+    padding-top: 26px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .menu-icon
+    z-index: 19
+    position: relative
+    display: none
+    width: 30px
+    height: 30px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 50px
+  .menu-icon-line
+    position: relative
+    width: 30px
+    height: 3px
+    background-color: $blue
+  .menu-icon-line::before
+    position: absolute
+    left: 0
+    top: -10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+  .menu-icon-line::after
+    position: absolute
+    left: 0
+    top: 10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+  .menu-icon.menu-icon-active .menu-icon-line
+    background-color: transparent
+  .menu-icon.menu-icon-active .menu-icon-line::before
+    transform: rotate(45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+  .menu-icon.menu-icon-active .menu-icon-line::after
+    transform: rotate(-45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+  .menu
+    z-index: 9
+    display: none
+    align-items: baseline
+    flex-direction: column
+    position: absolute
+    right: -300px
+    top: 0
+    width: 300px
+    padding: 40px
+    background-color: #232423
+    transition: transform 0.4s ease-in
+    border-radius: 0 0 0 50px
+    &__nav
+      flex-direction: column
+      padding-left: 0
+      padding-top: 30px
+  .nav
+    &__item
+      padding-top: 10px
+  .menu--active
+    transform: translateX(-100%)
+    display: block
+  .search
+    font-size: 30px
+  .sort
+    flex-direction: column
+    align-items: baseline
+    &__title
+      padding-right: 15px
+      padding-bottom: 10px
+    &__price
+      padding-bottom: 10px
+  .cards
+    justify-content: space-around
+    &__btn
+      padding: 20px 107px
+  .card
+    min-height: 440px
+    &__img
+      max-width: 300px
+      height: 200px
+  .options
+    &__color
+      padding-left: 10px
+  .info
+    padding: 10px 0 0 10px
+  .discount
+    top: 20px
+    left: 20px
+  .heart
+    top: 20px
   .form
     &__input
       width: 250px
   .footer
-    padding: 85px 0 0 50px
+    display: flex
+    flex-direction: column
+    padding: 15px
+    margin-top: 50px
     margin-bottom: 40px
+    height: 410px
     &__btn
-      padding: 0 20px
+      padding: 0 74px
+      margin: auto
+    &__form
+      flex-direction: column
   .leftBlock
+    &__title
+      font-size: 30px
+      line-height: 40px
     &__text
       line-height: 30px
+      font-size: 20px
+  .subscribe
+    &__label
+      font-size: 9px
+
   #button-up
     right: 5px
     width: 40px

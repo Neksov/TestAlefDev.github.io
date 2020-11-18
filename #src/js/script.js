@@ -1,7 +1,7 @@
+window.addEventListener('DOMContentLoaded' , () =>{//load дожидается загрузки всей страницы, DOMContentLoaded дожидает только загрузки DOM дерево
 'use strict'
 //Кнопка на вверх
 const button = () =>{
-  document.addEventListener('DOMContentLoaded', () => {
     let buttonUp = document.querySelector('#button-up');
     window.onscroll = () =>{
         if (window.pageYOffset > 580) {
@@ -17,7 +17,6 @@ const button = () =>{
             behavior: 'smooth'
         });
     });
-  });
 };
 button();
 
@@ -27,15 +26,27 @@ const burger = () =>{
         menu = document.querySelector('.menu');
   
         document.addEventListener('click', (elem) =>{
-          if(elem.target.closest('#menu-togle')){
+          if(elem.target.closest('#menu-togle') ){
             menuToggle.classList.toggle('menu-icon-active');
-            menu.classList.toggle('mobile-nav--active');
-            menu.style.display = 'block';
-          }else if(elem.target.closest('li>a') || !elem.target.closest('menu')){
-            menuToggle.classList.toggle('menu-icon-active');
-            menu.classList.toggle('mobile-nav--active');
-            menu.style.display = 'none';
+            menu.classList.toggle('menu--active');
           }
+          
         });    
 };
 burger();
+
+//heart
+const heart = () =>{
+  const heartPush = document.querySelectorAll('.heart');
+
+  heartPush.forEach((elem) =>{
+    elem.addEventListener('click', (event)=>{
+      if(event.target.matches('.heart')){
+        elem.classList.toggle('heartActive')
+      }
+    });
+  });
+};
+heart();
+
+});
