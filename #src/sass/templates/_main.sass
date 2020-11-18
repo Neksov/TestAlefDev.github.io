@@ -1,0 +1,121 @@
+.main
+  padding-top: 36px
+.sort
+  display: flex
+  align-items: center
+  font-style: normal
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.5px
+  &__title
+    font-weight: bold
+    padding-right: 46px
+  &__price
+    padding-right: 54px
+    cursor: pointer
+  &__age
+    cursor: pointer
+.price
+  &__title
+    padding-right: 8px
+.age
+  &__title
+    padding-right: 15px
+    padding-top: 2px
+.arrow
+  padding-top: 4px
+.cards
+  margin-top: 37px
+  margin-bottom: 37px
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  position: relative
+  &__btn
+    margin: auto
+    margin-top: 45px
+    padding: 20px 128px
+    transition: all 0.4s ease-in-out
+    &:hover
+      background-color: $blue
+      color: $white
+      border: none
+.card
+  position: relative
+  min-height: 521px
+  max-width: 380px
+  background: $light
+  border-radius: 0px 0px 10px 10px
+  margin-bottom: 23px
+  &__img
+    max-width: 380px
+    height: 264px
+  &__btn
+    width: 100%
+    margin-top: 29px
+    border-radius: 0px 0px 10px 10px
+.heart
+  position: absolute
+  top: 36px
+  right: 33px
+  cursor: pointer
+.heartActive
+  display: none
+  position: absolute
+  top: 36px
+  right: 33px
+.discount
+  position: absolute
+  top: 34px
+  left: 37px
+  width: 78px
+  height: 39px
+  background: $red
+  border-radius: 10px
+  text-align: center
+  padding: 10px
+.info
+  padding: 26px 0px 0px 28px
+  font-style: normal
+  &__title
+    font-weight: bold
+    font-size: 24px
+    line-height: 29px
+    letter-spacing: 1px
+  &__options
+    font-size: 12px
+    line-height: 15px
+  &__price
+    font-weight: bold
+    font-size: 24px
+    line-height: 29px
+    margin-top: 18px
+    letter-spacing: 0.6px
+.options
+  font-size: 12px
+  line-height: 15px
+  display: flex
+  align-items: flex-start
+  margin-top: 22px
+  &__color
+    flex-basis: 37%
+    position: relative
+    padding-left: 20px
+    &::before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 4px
+      height: 26px
+      background: $blue
+  &__age
+    flex-basis: 23%
+  &__paw
+    flex-basis: 33%
+    padding-left: 19px
+  &-black
+    font-weight: bold
+    font-size: 16px
+    line-height: 20px

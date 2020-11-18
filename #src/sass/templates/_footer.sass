@@ -1,0 +1,65 @@
+.footer
+  background: $dark
+  height: 312px
+  margin-top: 83px
+  margin-bottom: 114px
+  display: flex
+  justify-content: space-between
+  padding: 85px 0px 0px 84px
+  &__form
+    display: flex
+    margin-right: 80px
+    margin-top: 6px
+  &__input
+    margin-right: 10px
+    &-group
+      margin-bottom: 23px
+  &__btn
+    padding: 0px 74px
+    border-radius: 10px
+    font-weight: bold
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.5px
+    &:hover
+      background: $white
+      color: $blue
+.leftBlock
+  color: $white
+  &__title
+    font-weight: bold
+    font-size: 48px
+    line-height: 59px
+    letter-spacing: 1.5px
+  &__text
+    max-width: 401px
+    font-size: 28px
+    line-height: 95%
+    padding-top: 25px
+    letter-spacing: -0.2px
+.subscribe
+  display: flex
+  align-items: center
+  &__checkbox
+    position: absolute
+    z-index: -1
+    opacity: 0
+  &__label
+    font-size: 14px
+    line-height: 17px
+    color: $white
+.subscribe__checkbox+label
+  display: inline-flex
+  align-items: center
+  user-select: none
+  &::before
+    content: ''
+    display: inline-block
+    width: 18px
+    height: 18px
+    border-radius: 3px
+    margin-right: 0.5em
+    background: $white
+    margin-right: 20px
+.subscribe__checkbox:checked+label::before
+  background: $blue url(../img/check.png) no-repeat center

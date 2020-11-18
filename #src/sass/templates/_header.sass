@@ -1,1 +1,62 @@
+.header
+  background: url(../img/menuFon.jpg) no-repeat center/cover
+  height: 252px
+  &::before
+    content: ''
+    position: absolute
+    left: 0
+    top: 0
+    width: 100%
+    height: 252px
+    background-color: rgba(31, 32, 33, 0.788)
+    z-index: 0
+.menu
+  position: relative
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding-top: 26px
+  z-index: 1
+  color: $white
+  font-size: 18px
+  line-height: 22px
+  font-style: normal
+  &__nav
+    margin-right: auto
+    padding-left: 120px
 
+.logo
+  &__mobile
+    display: none
+    // padding-top: 26px
+    position: relative
+    z-index: 1
+.nav
+  display: flex
+  margin-top: -8px
+  &__item
+    padding-right: 73px
+    transition: all 0.4s ease-in-out
+    &:nth-child(n + 2):nth-child(-n + 4)
+      padding-right: 57px
+    &:hover
+      font-weight: bold
+.contacts
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  padding-top: 13px
+  &__phone
+    font-size: 24px
+    font-weight: bold
+    line-height: 35px
+    letter-spacing: 0.5px
+.search
+  position: relative
+  z-index: 1
+  font-weight: bold
+  font-size: 38px
+  line-height: 46px
+  color: #FFFFFF
+  padding-top: 32px
+  letter-spacing: 1px

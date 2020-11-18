@@ -1,0 +1,139 @@
+@media  screen and (min-width : 1024px) and (max-width : 1280px)
+  .container
+    max-width: 980px
+  .cards
+    justify-content: space-around
+  .form
+    &__input
+      width: 250px
+  .footer
+    &__btn
+      padding: 0 20px
+  #button-up
+    right: 5px
+    width: 50px
+    height: 50px
+
+@media  screen and (min-width : 992px) and (max-width : 1023px)
+  .container
+    max-width: 970px
+  .cards
+    justify-content: space-around
+  .form
+    &__input
+      width: 250px
+  .footer
+    padding: 85px 0 0 50px
+    margin-bottom: 40px
+    &__btn
+      padding: 0 20px
+  .leftBlock
+    &__text
+      line-height: 30px
+  #button-up
+    right: 5px
+    width: 40px
+    height: 40px
+  // .animated
+  //   transition-property: none !important
+  //   transform: none !important
+  //   animation: none !important
+
+@media  screen and (min-width : 768px) and (max-width : 991px)
+  .container
+    max-width: 970px
+  .menu
+    display: none
+  .logo
+    &__mobile
+      display: block
+  .mobile
+    padding-top: 26px
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .menu-icon
+    z-index: 19
+    position: relative
+    display: none
+    width: 30px
+    height: 30px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: 50px
+  .menu-icon-line
+    position: relative
+    width: 30px
+    height: 3px
+    background-color: $blue
+  .menu-icon-line::before
+    position: absolute
+    left: 0
+    top: -10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+
+  .menu-icon-line::after
+    position: absolute
+    left: 0
+    top: 10px
+    content: ''
+    width: 30px
+    height: 3px
+    background-color: $blue
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s
+
+  .menu-icon.menu-icon-active .menu-icon-line
+    background-color: transparent
+
+  .menu-icon.menu-icon-active .menu-icon-line::before
+    transform: rotate(45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+
+  .menu-icon.menu-icon-active .menu-icon-line::after
+    transform: rotate(-45deg)
+    top: 0
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s
+  .menu
+    z-index: 9
+    display: none
+    position: absolute
+    right: -350px
+    top: 0
+    width: 320px
+    padding: 40px
+    background-color: #232423
+    transition: transform 0.4s ease-in
+    border-radius: 0 0 0 50px
+    &__nav
+      flex-direction: column
+      padding-left: 0
+      padding-top: 30px
+  .nav
+    &__item
+      padding-top: 10px
+  .mobile-nav--active
+    transform: translateX(-100%)
+  .cards
+    justify-content: space-around
+  .form
+    &__input
+      width: 250px
+  .footer
+    padding: 85px 0 0 50px
+    margin-bottom: 40px
+    &__btn
+      padding: 0 20px
+  .leftBlock
+    &__text
+      line-height: 30px
+  #button-up
+    right: 5px
+    width: 40px
+    height: 40px
