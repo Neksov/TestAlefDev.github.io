@@ -1,5 +1,15 @@
 .main
   padding-top: 36px
+  &__btn
+    display: block
+    margin: auto
+    margin-top: 45px
+    padding: 20px 128px
+    transition: all 0.4s ease-in-out
+    &:hover
+      background-color: $blue
+      color: $white
+      border: none
 .sort
   display: flex
   align-items: center
@@ -15,6 +25,8 @@
     cursor: pointer
   &__age
     cursor: pointer
+    display: flex
+    align-items: baseline
 .price
   &__title
     padding-right: 8px
@@ -24,6 +36,11 @@
     padding-top: 2px
 .arrow
   padding-top: 4px
+.arrow2
+  padding-top: 4px
+.arrowActive
+  padding-top: 4px
+  transform: rotate(270deg)
 .cards
   margin-top: 37px
   margin-bottom: 37px
@@ -32,15 +49,7 @@
   flex-wrap: wrap
   justify-content: space-between
   position: relative
-  &__btn
-    margin: auto
-    margin-top: 45px
-    padding: 20px 128px
-    transition: all 0.4s ease-in-out
-    &:hover
-      background-color: $blue
-      color: $white
-      border: none
+
 .card
   position: relative
   min-height: 521px
@@ -48,9 +57,16 @@
   background: $light
   border-radius: 0px 0px 10px 10px
   margin-bottom: 23px
+  overflow: hidden
   &__img
     max-width: 380px
     height: 264px
+    transition: all 0.4s ease-in-out
+    transform: scale(1)
+    cursor: pointer
+    &:hover
+      transform: scale(1.1)
+
   &__btn
     width: 100%
     margin-top: 29px
